@@ -117,7 +117,196 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"src/index.js":[function(require,module,exports) {
+})({"src/mode2Questions.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _default = [{
+  question: 'What is the weather tomorrow?',
+  answers: [{
+    value: 'Sunny',
+    isCorrect: 1
+  }, {
+    value: 'Rainy',
+    isCorrect: 0
+  }, {
+    value: 'Windy',
+    isCorrect: 0
+  }]
+}, {
+  question: 'What is the weather the day after tomorrow?',
+  answers: [{
+    value: 'Sunny',
+    isCorrect: 1
+  }, {
+    value: 'Rainy',
+    isCorrect: 0
+  }, {
+    value: 'Windy',
+    isCorrect: 0
+  }]
+}];
+exports.default = _default;
+},{}],"src/question.js":[function(require,module,exports) {
+"use strict";
+
+var _mode2Questions = _interopRequireDefault(require("./mode2Questions"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+console.log(12345);
+
+var byId = function byId(id) {
+  return document.getElementById(id);
+};
+
+var page = {
+  selectMode: true,
+  Mode1Rule: false,
+  Mode2Rule: false,
+  Mode1Game: false,
+  Mode2Game: true
+};
+
+byId('mode1').onclick = function () {
+  return changePageTo('Mode1Game');
+};
+
+byId('mode2').onclick = function () {
+  return changePageTo('Mode2Game');
+};
+
+var changePageTo = function changePageTo(pageName) {
+  var allPages = Object.keys(page);
+  allPages.forEach(function (pn) {
+    byId(pn).style.display = 'none';
+    page[pn] = false;
+  });
+  page[pageName] = true;
+  byId(pageName).style.display = 'block';
+
+  if (pageName === 'Mode2Game') {
+    var game2 = new Mode2Game(15, _mode2Questions.default);
+    game2.start();
+    return game2;
+  }
+};
+
+var HIT_UNIT = 10;
+
+var Mode2Game =
+/*#__PURE__*/
+function () {
+  function Mode2Game() {
+    var _this = this;
+
+    var timeOut = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 10;
+    var questions = arguments.length > 1 ? arguments[1] : undefined;
+
+    _classCallCheck(this, Mode2Game);
+
+    this.timeOut = timeOut;
+    this.root = byId('Mode2Game');
+    this.questions = questions;
+    this.counter = document.querySelector('#Mode2Game .timer');
+    this.question = document.querySelector('#Mode2Game .question');
+    this.answers = document.querySelectorAll('#Mode2Game .answer');
+    this.answers.forEach(function (el) {
+      return el.onclick = _this.handleClick.bind(_this);
+    });
+    this.step = 0;
+    this.info = document.querySelector('#Mode2Game .info');
+  }
+
+  _createClass(Mode2Game, [{
+    key: "start",
+    value: function start() {
+      var _this2 = this;
+
+      this.renderQuestion();
+      this.intervalId = setInterval(function () {
+        _this2.timeOut -= 1;
+        _this2.counter.innerText = _this2.timeOut;
+
+        if (_this2.timeOut === 0) {
+          clearInterval(_this2.intervalId);
+        }
+
+        console.log(_this2.status);
+      }, 1000);
+    }
+  }, {
+    key: "renderQuestion",
+    value: function renderQuestion() {
+      if (this.step === this.questions.length) {
+        this.end();
+        return;
+      }
+
+      var current = this.questions[this.step];
+      this.question.innerText = current.question;
+      var answers = Array.from(this.answers);
+      answers.forEach(function (el, idx) {
+        el.innerText = current.answers[idx].value;
+        el.dataset.isCorrect = current.answers[idx].isCorrect;
+      });
+      this.step += 1;
+    }
+  }, {
+    key: "handleClick",
+    value: function handleClick(event) {
+      var isCorrect = event.target.dataset.isCorrect;
+
+      if (isCorrect == 1) {
+        console.log(isCorrect);
+        this.hit();
+      } else {
+        this.miss();
+      }
+
+      this.renderQuestion();
+    }
+  }, {
+    key: "hit",
+    value: function hit() {
+      this.timeOut += HIT_UNIT;
+    }
+  }, {
+    key: "miss",
+    value: function miss() {
+      this.timeOut -= HIT_UNIT;
+    }
+  }, {
+    key: "end",
+    value: function end() {
+      clearInterval(this.intervalId);
+      this.info.innerText = 'Game Completed!';
+    }
+  }, {
+    key: "status",
+    get: function get() {
+      return this.intervalId ? this.timeOut > 0 ? 'Playing' : 'Over' : 'Pending';
+    }
+  }]);
+
+  return Mode2Game;
+}();
+},{"./mode2Questions":"src/mode2Questions.js"}],"src/index.js":[function(require,module,exports) {
+"use strict";
+
+var _question = _interopRequireDefault(require("./question"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 var video = document.getElementById('video');
 var startBtn = document.getElementById('button');
 var select = document.getElementById('select');
@@ -245,7 +434,7 @@ cv['onRuntimeInitialized'] = function () {
     }, 0);
   }
 };
-},{}],"../../../../../home/envl/.nvm/versions/node/v8.11.1/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./question":"src/question.js"}],"../../.nvm/versions/node/v10.16.0/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -273,7 +462,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "9039" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59653" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -449,5 +638,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../../../../home/envl/.nvm/versions/node/v8.11.1/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","src/index.js"], null)
+},{}]},{},["../../.nvm/versions/node/v10.16.0/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","src/index.js"], null)
 //# sourceMappingURL=/src.a2b27638.js.map

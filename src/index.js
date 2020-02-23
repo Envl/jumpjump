@@ -6,6 +6,8 @@ let src
 let dst
 let streaming = true
 
+import questionEffect from './question'
+
 function gotDevices(mediaDevices) {
   select.innerHTML = ''
   select.appendChild(document.createElement('option'))
@@ -37,7 +39,7 @@ startBtn.onclick = event => {
   if (select.value === '') {
     videoConstraints.facingMode = 'environment'
   } else {
-    videoConstraints.deviceId = {exact: select.value}
+    videoConstraints.deviceId = { exact: select.value }
   }
   const constraints = {
     video: videoConstraints,
