@@ -4,6 +4,7 @@ console.log(music[0])
 export class Mode1Game {
   constructor() {
     this.player = document.querySelector('#Mode1Game > audio')
+    this.player.onended = this.handleEnd.bind(this)
     this.info = document.querySelector('#Mode1Game .info')
     this.playGround = document.querySelector('#Mode1Game .playground')
     this.timeOut = 3
@@ -43,6 +44,7 @@ export class Mode1Game {
       const active = document.createElement('div')
       active.className = 'active'
       active.innerText = 'I am active'
+      active.onclick = () => (this.score += 10)
       // change coordinates here
       this.grids.push(active)
       const inactive = document.createElement('div')
@@ -51,7 +53,6 @@ export class Mode1Game {
       this.grids.push(inactive)
       this.playGround.appendChild(active)
       this.playGround.appendChild(inactive)
-
       setTimeout(() => {
         active.remove()
         inactive.remove()
@@ -59,5 +60,10 @@ export class Mode1Game {
         this.step += 1
       }, music[this.step][1])
     }
+  }
+
+  handleEnd() {
+    clearInterval(this.musicLoopId)
+    this.info.innerText = this.score
   }
 }

@@ -281,6 +281,7 @@ function () {
     _classCallCheck(this, Mode1Game);
 
     this.player = document.querySelector('#Mode1Game > audio');
+    this.player.onended = this.handleEnd.bind(this);
     this.info = document.querySelector('#Mode1Game .info');
     this.playGround = document.querySelector('#Mode1Game .playground');
     this.timeOut = 3;
@@ -322,7 +323,12 @@ function () {
       if (currentTime * 1000 >= _music.default[this.step][0] && currentTime * 1000 < _music.default[this.step + 1][0] && !this.grids.length) {
         var active = document.createElement('div');
         active.className = 'active';
-        active.innerText = 'I am active'; // change coordinates here
+        active.innerText = 'I am active';
+
+        active.onclick = function () {
+          return _this2.score += 10;
+        }; // change coordinates here
+
 
         this.grids.push(active);
         var inactive = document.createElement('div');
@@ -338,6 +344,12 @@ function () {
           _this2.step += 1;
         }, _music.default[this.step][1]);
       }
+    }
+  }, {
+    key: "handleEnd",
+    value: function handleEnd() {
+      clearInterval(this.musicLoopId);
+      this.info.innerText = this.score;
     }
   }, {
     key: "status",
