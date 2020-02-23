@@ -237,11 +237,9 @@ function () {
         _this2.timeOut -= 1;
         _this2.counter.innerText = _this2.timeOut;
 
-        if (_this2.timeOut === 0) {
-          clearInterval(_this2.intervalId);
+        if (_this2.timeOut === 0 && _this2.stillQuestionLeft) {
+          _this2.fail();
         }
-
-        console.log(_this2.status);
       }, 1000);
     }
   }, {
@@ -257,7 +255,7 @@ function () {
       var answers = Array.from(this.answers);
       answers.forEach(function (el, idx) {
         el.innerText = current.answers[idx].value;
-        el.dataset.isCorrect = current.answers[idx].isCorrect;
+        el.dataset.isCorrect = current.answers[idx].isCorrect; // change x and y here
       });
       this.step += 1;
     }
@@ -292,9 +290,20 @@ function () {
       this.info.innerText = 'Game Completed!';
     }
   }, {
+    key: "fail",
+    value: function fail() {
+      this.info.innerText = 'Game Over';
+      clearInterval(this.intervalId);
+    }
+  }, {
     key: "status",
     get: function get() {
       return this.intervalId ? this.timeOut > 0 ? 'Playing' : 'Over' : 'Pending';
+    }
+  }, {
+    key: "stillQuestionLeft",
+    get: function get() {
+      return this.step < this.questions.length;
     }
   }]);
 

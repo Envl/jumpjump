@@ -48,15 +48,18 @@ class Mode2Game {
     return this.intervalId ? (this.timeOut > 0 ? 'Playing' : 'Over') : 'Pending'
   }
 
+  get stillQuestionLeft() {
+    return this.step < this.questions.length
+  }
+
   start() {
     this.renderQuestion()
     this.intervalId = setInterval(() => {
       this.timeOut -= 1
       this.counter.innerText = this.timeOut
-      if (this.timeOut === 0) {
-        clearInterval(this.intervalId)
+      if (this.timeOut === 0 && this.stillQuestionLeft) {
+        this.fail()
       }
-      console.log(this.status)
     }, 1000)
   }
 
@@ -71,6 +74,7 @@ class Mode2Game {
     answers.forEach((el, idx) => {
       el.innerText = current.answers[idx].value
       el.dataset.isCorrect = current.answers[idx].isCorrect
+      // change x and y here
     })
     this.step += 1
   }
@@ -97,5 +101,10 @@ class Mode2Game {
   end() {
     clearInterval(this.intervalId)
     this.info.innerText = 'Game Completed!'
+  }
+
+  fail() {
+    this.info.innerText = 'Game Over'
+    clearInterval(this.intervalId)
   }
 }
