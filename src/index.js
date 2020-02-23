@@ -6,7 +6,42 @@ let src
 let dst
 let streaming = true
 
-import questionEffect from './question'
+import { Mode2Game } from './question'
+import { Mode1Game } from './mode1'
+
+const byId = id => document.getElementById(id)
+
+const page = {
+  selectMode: true,
+  Mode1Rule: false,
+  Mode2Rule: false,
+  Mode1Game: false,
+  Mode2Game: false,
+}
+import mode2Questions from './mode2Questions'
+
+byId('mode1').onclick = () => changePageTo('Mode1Game')
+byId('mode2').onclick = () => changePageTo('Mode2Game')
+
+const changePageTo = (pageName, ...options) => {
+  const allPages = Object.keys(page)
+  allPages.forEach(pn => {
+    byId(pn).style.display = 'none'
+    page[pn] = false
+  })
+  page[pageName] = true
+  byId(pageName).style.display = 'block'
+  if (pageName === 'Mode2Game') {
+    const game2 = new Mode2Game(15, mode2Questions)
+    game2.start()
+    return game2
+  }
+  if (pageName === 'Mode1Game') {
+    const game1 = new Mode1Game()
+    game1.start()
+    return game1
+  }
+}
 
 function gotDevices(mediaDevices) {
   select.innerHTML = ''
