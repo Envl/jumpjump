@@ -1,0 +1,64 @@
+{"question":"384+527+139=?",
+	"answer":[
+		{
+			"value":"1030",
+			"isCorrect":"0"
+		},
+		{
+			"value":"1040",
+			"isCorrect":"0"
+		},
+		{
+			"value":"1050",
+			"isCorrect":"1"
+		}
+	]
+},
+{"question":"2020-2002+1001-1010=?",
+	"answer":[
+		{
+			"value":"11",
+			"isCorrect":"0"
+		},
+		{
+			"value":"9",
+			"isCorrect":"1"
+		},
+		{
+			"value":"10",
+			"isCorrect":"0"
+		}
+	]
+},
+{"question":"789-456-123=?",
+	"answer":[
+		{
+			"value":"210",
+			"isCorrect":"1"
+		},
+		{
+			"value":"220",
+			"isCorrect":"0"
+		},
+		{
+			"value":"230",
+			"isCorrect":"0"
+		}
+	]
+},
+{"question":"1000-7-7-7=?",
+	"answer":[
+		{
+			"value":"969",
+			"isCorrect":"0"
+		},
+		{
+			"value":"979",
+			"isCorrect":"1"
+		},
+		{
+			"value":"989",
+			"isCorrect":"0"
+		}
+	]
+},

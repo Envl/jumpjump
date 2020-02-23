@@ -1,0 +1,65 @@
+{"question":"There's a strange village with 100 people. Men tell the truth and women lie. A stranger came and asked: How many women are there in your village? The first villager said one, the second villager said two ... and so on, and the 100th villager said 100. So how many women are there in this village?",
+	"answer":[
+		{
+			"value":"1",
+			"isCorrect":"0"
+		},
+		{
+			"value":"99",
+			"isCorrect":"1"
+		},
+		{
+			"value":"100",
+			"isCorrect":"0"
+		}
+	]
+},
+{"question":"There are only two hairdressers in the town. A has messy clothes and messy hair. B dresses stylishly and has exquisite hair. Who do you choose to cut your hair?",
+	"answer":[
+		{
+			"value":"A",
+			"isCorrect":"1"
+		},
+		{
+			"value":"B",
+			"isCorrect":"0"
+		},
+		{
+			"value":"Either",
+			"isCorrect":"0"
+		}
+	]
+},
+{"question":"Oly goes from Site A to Site B. A minute later, Amy goes from Site B to Site A. When the two met on the way, who was farther away from Site A?",
+	"answer":[
+		{
+			"value":"Oly",
+			"isCorrect":"0"
+		},
+		{
+			"value":"Amy",
+			"isCorrect":"0"
+		},
+		{
+			"value":"Both the same",
+			"isCorrect":"1"
+		}
+	]
+},
+{"question":"If you are facing the East, after turning right, right, left, right, right, left, which direction are you facing now",
+	"answer":[
+		{
+			"value":"South",
+			"isCorrect":"0"
+		},
+		{
+			"value":"Norsth",
+			"isCorrect":"0"
+		},
+		{
+			"value":"West",
+			"isCorrect":"1"
+		}
+	]
+}
+
