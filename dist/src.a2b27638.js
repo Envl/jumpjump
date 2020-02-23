@@ -246,7 +246,7 @@ function () {
     key: "renderQuestion",
     value: function renderQuestion() {
       if (this.step === this.questions.length) {
-        this.end();
+        this.complete();
         return;
       }
 
@@ -284,8 +284,8 @@ function () {
       this.timeOut -= HIT_UNIT;
     }
   }, {
-    key: "end",
-    value: function end() {
+    key: "complete",
+    value: function complete() {
       clearInterval(this.intervalId);
       this.info.innerText = 'Game Completed!';
     }

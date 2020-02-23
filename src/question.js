@@ -65,7 +65,7 @@ class Mode2Game {
 
   renderQuestion() {
     if (this.step === this.questions.length) {
-      this.end()
+      this.complete()
       return
     }
     const current = this.questions[this.step]
@@ -98,7 +98,7 @@ class Mode2Game {
     this.timeOut -= HIT_UNIT
   }
 
-  end() {
+  complete() {
     clearInterval(this.intervalId)
     this.info.innerText = 'Game Completed!'
   }
