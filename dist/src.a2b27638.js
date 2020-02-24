@@ -166,6 +166,7 @@ function () {
     value: function start() {
       var _this2 = this;
 
+      document.querySelector('#Mode2Rule').className = 'fk-hidden';
       this.renderQuestion();
       this.intervalId = setInterval(function () {
         _this2.timeOut -= 1;
@@ -175,6 +176,18 @@ function () {
           _this2.fail();
         }
       }, 1000);
+      document.querySelector('#Mode2Game').className = 'mode2';
+    }
+  }, {
+    key: "ready",
+    value: function ready() {
+      var _this3 = this;
+
+      document.querySelector('#Mode2Rule').className = 'show-scene';
+
+      document.querySelector('#Mode2Rule').querySelector('img').onclick = function (evt) {
+        _this3.start();
+      };
     }
   }, {
     key: "renderQuestion",
@@ -277,6 +290,8 @@ var Mode1Game =
 /*#__PURE__*/
 function () {
   function Mode1Game() {
+    var _this = this;
+
     _classCallCheck(this, Mode1Game);
 
     this.player = document.querySelector('#Mode1Game > audio');
@@ -290,44 +305,65 @@ function () {
     this.grids = [];
     this.brickNow = document.querySelector('#step-cur');
     this.brickNext = document.querySelector('#step-next');
-    this.nowPos = [900, 600];
-    this.nexPos = this.genNextPos(this.nowPos[0], this.nowPos[1], 150, 1920, 1080);
+
+    document.querySelector('#step-next').onclick = function (evt) {
+      _this.score += 5;
+      document.querySelector('#score').innerText = _this.score;
+    };
+
+    window.onkeydown = function (e) {
+      if (e.key == 'x') {
+        _this.score += 5;
+        document.querySelector('#score').innerText = _this.score;
+      }
+
+      if (e.key == 'z') {
+        _this.score -= 2;
+        document.querySelector('#score').innerText = _this.score;
+      }
+    };
+
+    this.nowPos = [500, 300];
+    this.nexPos = this.genNextPos(this.nowPos[0], this.nowPos[1], 150, 1280, 720);
+    this.scoreDom = document.querySelector('#score');
   }
 
   _createClass(Mode1Game, [{
     key: "start",
     value: function start() {
-      var _this = this;
+      var _this2 = this;
 
       this.info.className += ' info-show';
       this.ruleDom.className += ' dimming';
+      document.querySelector('#step-cur').style.left = this.nowPos[0] + 'px';
+      document.querySelector('#step-cur').style.top = this.nowPos[1] + 'px';
       this.intervalId = setInterval(function () {
         // this.info.style.display = 'flex'
-        _this.info.innerText = _this.timeOut;
-        _this.timeOut -= 1;
+        _this2.info.innerText = _this2.timeOut;
+        _this2.timeOut -= 1;
 
-        if (_this.timeOut === -1) {
-          clearInterval(_this.intervalId); // this.player.style.display = 'block'
+        if (_this2.timeOut === -1) {
+          clearInterval(_this2.intervalId); // this.player.style.display = 'block'
 
-          _this.player.play();
+          _this2.player.play();
 
-          _this.brickNow.style.visibility = 'visible';
-          _this.info.className = 'vanish';
-          _this.ruleDom.className = 'vanish';
-          _this.musicLoopId = setInterval(_this.handleMusicLoop.bind(_this), 500);
+          _this2.brickNow.style.visibility = 'visible';
+          _this2.info.className = 'vanish';
+          _this2.ruleDom.className = 'vanish';
+          _this2.musicLoopId = setInterval(_this2.handleMusicLoop.bind(_this2), 500);
         }
       }, 1000);
     }
   }, {
     key: "ready",
     value: function ready() {
-      var _this2 = this;
+      var _this3 = this;
 
       this.ruleDom = document.querySelector('#Mode1Rule');
       this.ruleDom.className = 'show-scene';
 
       this.ruleDom.querySelector('img').onclick = function (evt) {
-        _this2.start();
+        _this3.start();
       };
     }
   }, {
@@ -347,7 +383,7 @@ function () {
   }, {
     key: "handleMusicLoop",
     value: function handleMusicLoop() {
-      var _this3 = this;
+      var _this4 = this;
 
       var currentTime = this.player.currentTime; // console.log(currentTime * 1000, music[this.step][0])
 
@@ -373,21 +409,21 @@ function () {
         // }, music[this.step][1])
 
         setTimeout(function () {
-          _this3.brickNext.className = 'invisible';
-          _this3.brickNow.className = 'dimmed';
-          _this3.nowPos = _this3.nexPos;
-          _this3.nexPos = _this3.genNextPos(_this3.nowPos[0], _this3.nowPos[1], 150, 1280, 720);
-          console.log(_this3.nowPos, _this3.nexPos);
-          document.querySelector('#step-next').style.left = _this3.nexPos[0] + 'px';
-          document.querySelector('#step-next').style.top = _this3.nexPos[1] + 'px';
-          document.querySelector('#step-cur').style.left = _this3.nowPos[0] + 'px';
-          document.querySelector('#step-cur').style.top = _this3.nowPos[1] + 'px'; // this.brickNext.style.left = `${this.nexPos[0]}px !important;`
+          _this4.brickNext.className = 'invisible';
+          _this4.brickNow.className = 'dimmed';
+          _this4.nowPos = _this4.nexPos;
+          _this4.nexPos = _this4.genNextPos(_this4.nowPos[0], _this4.nowPos[1], 150, 1280, 720);
+          console.log(_this4.nowPos, _this4.nexPos);
+          document.querySelector('#step-next').style.left = _this4.nexPos[0] + 'px';
+          document.querySelector('#step-next').style.top = _this4.nexPos[1] + 'px';
+          document.querySelector('#step-cur').style.left = _this4.nowPos[0] + 'px';
+          document.querySelector('#step-cur').style.top = _this4.nowPos[1] + 'px'; // this.brickNext.style.left = `${this.nexPos[0]}px !important;`
           // this.brickNext.style.top = `${this.nexPos[1]}px !important;`
           // this.brickNow.style.left = `${this.nowPos[0]}px !important;`
           // this.brickNow.style.top = `${this.nowPos[1]}px !important;`
 
-          _this3.step += 2;
-        }, _music.default[this.step][1] * 1.3);
+          _this4.step += 2;
+        }, _music.default[this.step][1] * 1.6);
       }
     }
   }, {
@@ -416,7 +452,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = void 0;
 var _default = [{
   question: 'What is the order of the colors of the French flag?',
-  answer: [{
+  answers: [{
     value: 'Blue,Red,White',
     isCorrect: '0'
   }, {
@@ -428,7 +464,7 @@ var _default = [{
   }]
 }, {
   question: '(30+20)/5=?',
-  answer: [{
+  answers: [{
     value: '5',
     isCorrect: '0'
   }, {
@@ -440,7 +476,7 @@ var _default = [{
   }]
 }, {
   question: 'The date of French National Day is?',
-  answer: [{
+  answers: [{
     value: 'July 14',
     isCorrect: '1'
   }, {
@@ -452,7 +488,7 @@ var _default = [{
   }]
 }, {
   question: 'How many countries are there in Europe?',
-  answer: [{
+  answers: [{
     value: '44',
     isCorrect: '0'
   }, {
@@ -464,7 +500,7 @@ var _default = [{
   }]
 }, {
   question: 'Which country is the westernmost point of mainland Europe?',
-  answer: [{
+  answers: [{
     value: 'France',
     isCorrect: '0'
   }, {
@@ -476,7 +512,7 @@ var _default = [{
   }]
 }, {
   question: 'Ireland is to the __??__ of Britain.',
-  answer: [{
+  answers: [{
     value: 'West',
     isCorrect: '1'
   }, {
@@ -488,7 +524,7 @@ var _default = [{
   }]
 }, {
   question: 'What is the national anthem of France?',
-  answer: [{
+  answers: [{
     value: "L'Internationale",
     isCorrect: '0'
   }, {
@@ -500,7 +536,7 @@ var _default = [{
   }]
 }, {
   question: 'Which of the following numbers is prime?',
-  answer: [{
+  answers: [{
     value: '12',
     isCorrect: '0'
   }, {
@@ -512,7 +548,7 @@ var _default = [{
   }]
 }, {
   question: 'The three angles of a triangle add up to __?__ degrees',
-  answer: [{
+  answers: [{
     value: '90',
     isCorrect: '0'
   }, {
@@ -524,7 +560,7 @@ var _default = [{
   }]
 }, {
   question: 'What color are human eyes most sensitive to?',
-  answer: [{
+  answers: [{
     value: 'Blue',
     isCorrect: '0'
   }, {
@@ -536,7 +572,7 @@ var _default = [{
   }]
 }, {
   question: 'How to say thank you in French?',
-  answer: [{
+  answers: [{
     value: 'Bonjour',
     isCorrect: '0'
   }, {
@@ -600,8 +636,9 @@ var changePageTo = function changePageTo(pageName) {
   byId(pageName).style.display = 'block';
 
   if (pageName === 'Mode2Game') {
-    var game2 = new _question.Mode2Game(15, _mode2Questions.default);
-    game2.start();
+    var game2 = new _question.Mode2Game(15, _mode2Questions.default); // game2.start()
+
+    game2.ready();
     return game2;
   }
 
@@ -767,7 +804,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "10122" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "14324" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

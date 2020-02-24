@@ -1,7 +1,7 @@
 export default [
   {
     question: 'What is the order of the colors of the French flag?',
-    answer: [
+    answers: [
       {
         value: 'Blue,Red,White',
         isCorrect: '0',
@@ -18,7 +18,7 @@ export default [
   },
   {
     question: '(30+20)/5=?',
-    answer: [
+    answers: [
       {
         value: '5',
         isCorrect: '0',
@@ -35,7 +35,7 @@ export default [
   },
   {
     question: 'The date of French National Day is?',
-    answer: [
+    answers: [
       {
         value: 'July 14',
         isCorrect: '1',
@@ -52,7 +52,7 @@ export default [
   },
   {
     question: 'How many countries are there in Europe?',
-    answer: [
+    answers: [
       {
         value: '44',
         isCorrect: '0',
@@ -69,7 +69,7 @@ export default [
   },
   {
     question: 'Which country is the westernmost point of mainland Europe?',
-    answer: [
+    answers: [
       {
         value: 'France',
         isCorrect: '0',
@@ -86,7 +86,7 @@ export default [
   },
   {
     question: 'Ireland is to the __??__ of Britain.',
-    answer: [
+    answers: [
       {
         value: 'West',
         isCorrect: '1',
@@ -103,7 +103,7 @@ export default [
   },
   {
     question: 'What is the national anthem of France?',
-    answer: [
+    answers: [
       {
         value: "L'Internationale",
         isCorrect: '0',
@@ -120,7 +120,7 @@ export default [
   },
   {
     question: 'Which of the following numbers is prime?',
-    answer: [
+    answers: [
       {
         value: '12',
         isCorrect: '0',
@@ -137,7 +137,7 @@ export default [
   },
   {
     question: 'The three angles of a triangle add up to __?__ degrees',
-    answer: [
+    answers: [
       {
         value: '90',
         isCorrect: '0',
@@ -154,7 +154,7 @@ export default [
   },
   {
     question: 'What color are human eyes most sensitive to?',
-    answer: [
+    answers: [
       {
         value: 'Blue',
         isCorrect: '0',
@@ -171,7 +171,7 @@ export default [
   },
   {
     question: 'How to say thank you in French?',
-    answer: [
+    answers: [
       {
         value: 'Bonjour',
         isCorrect: '0',

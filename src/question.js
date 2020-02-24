@@ -22,6 +22,7 @@ export class Mode2Game {
   }
 
   start() {
+    document.querySelector('#Mode2Rule').className = 'fk-hidden'
     this.renderQuestion()
     this.intervalId = setInterval(() => {
       this.timeOut -= 1
@@ -30,6 +31,13 @@ export class Mode2Game {
         this.fail()
       }
     }, 1000)
+    document.querySelector('#Mode2Game').className = 'mode2'
+  }
+  ready() {
+    document.querySelector('#Mode2Rule').className = 'show-scene'
+    document.querySelector('#Mode2Rule').querySelector('img').onclick = evt => {
+      this.start()
+    }
   }
 
   renderQuestion() {
@@ -49,7 +57,7 @@ export class Mode2Game {
   }
 
   handleClick(event) {
-    const { isCorrect } = event.target.dataset
+    const {isCorrect} = event.target.dataset
     if (isCorrect == 1) {
       console.log(isCorrect)
       this.hit()

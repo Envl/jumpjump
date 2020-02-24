@@ -37,12 +37,23 @@ canvas {
   width: 1920px;
   height: 1080px;
 }
+#score {
+  position: fixed;
+  left: 20px;
+  top: 20px;
+  width: 100px;
+  height: 50px;
+  font-weight: bold;
+  font-size: 40px;
+  z-index: 10000;
+  color: red;
+}
 #step-cur,
 #step-next {
   position: fixed;
   z-index: 9999;
   visibility: hidden;
-  background-color: white;
+  background-color: rgb(253, 106, 106);
   width: 150px;
   height: 150px;
   border-radius: 50%;
@@ -55,18 +66,18 @@ canvas {
 #step-cur {
   /* background-color: var(--cred);
   filter: brightness(0.3); */
-  background-color: rgb(253, 106, 106);
+  background-color: white;
 }
 #step-next {
   /* background-color: var(--cred); */
-  background-color: white;
+  /* background-color: white; */
 }
 #step-cur.dimmed {
   /* background-color: rgb(119, 62, 24); */
   background-color: #888;
 }
 body {
-  /* transform: scaleY(-1) scaleX(-1); */
+  transform: scaleY(-1) scaleX(-1);
   position: fixed;
   background: black !important;
   height: 100%;
@@ -86,10 +97,59 @@ body {
 }
 #vid-area {
   position: fixed;
-  z-index: 1000;
+  z-index: 10000;
   width: 100%;
   height: 100%;
   background-color: gray;
+}
+.mode2 {
+  z-index: 10000;
+  color: white;
+}
+.timer {
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  font-size: 40px;
+}
+.question {
+  font-size: 70px;
+  margin-left: 150px;
+}
+#ans1 {
+  position: fixed;
+  color: black;
+  left: 120px;
+  top: 250px;
+  font-size: 50px;
+  background-color: aqua;
+  padding: 45px;
+  border-radius: 50%;
+}
+#ans2 {
+  position: fixed;
+  color: black;
+  right: 70px;
+  top: 270px;
+  border-radius: 50%;
+  font-size: 50px;
+  background-color: rgb(255, 85, 0);
+  padding: 45px;
+}
+.info2 {
+  position: fixed;
+  bottom: 10px !important;
+  font-size: 40px;
+}
+#ans3 {
+  position: fixed;
+  color: black;
+  right: 40%;
+  padding: 45px;
+  border-radius: 50%;
+  bottom: 40px;
+  font-size: 50px;
+  background-color: rgb(193, 255, 195);
 }
 .fk-hidden {
   display: none !important;
@@ -100,6 +160,7 @@ body {
   overflow: hidden;
 }
 #selectMode {
+  z-index: 7999;
   top: 0;
   left: 0;
   position: fixed;

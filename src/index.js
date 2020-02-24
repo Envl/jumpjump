@@ -36,7 +36,8 @@ const changePageTo = (pageName, ...options) => {
   byId(pageName).style.display = 'block'
   if (pageName === 'Mode2Game') {
     const game2 = new Mode2Game(15, mode2Questions)
-    game2.start()
+    // game2.start()
+    game2.ready()
     return game2
   }
   if (pageName === 'Mode1Game') {

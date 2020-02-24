@@ -14,14 +14,29 @@ export class Mode1Game {
     this.grids = []
     this.brickNow = document.querySelector('#step-cur')
     this.brickNext = document.querySelector('#step-next')
-    this.nowPos = [900, 600]
+    document.querySelector('#step-next').onclick = evt => {
+      this.score += 5
+      document.querySelector('#score').innerText = this.score
+    }
+    window.onkeydown = e => {
+      if (e.key == 'x') {
+        this.score += 5
+        document.querySelector('#score').innerText = this.score
+      }
+      if (e.key == 'z') {
+        this.score -= 2
+        document.querySelector('#score').innerText = this.score
+      }
+    }
+    this.nowPos = [500, 300]
     this.nexPos = this.genNextPos(
       this.nowPos[0],
       this.nowPos[1],
       150,
-      1920,
-      1080,
+      1280,
+      720,
     )
+    this.scoreDom = document.querySelector('#score')
   }
 
   get status() {
@@ -31,6 +46,8 @@ export class Mode1Game {
   start() {
     this.info.className += ' info-show'
     this.ruleDom.className += ' dimming'
+    document.querySelector('#step-cur').style.left = this.nowPos[0] + 'px'
+    document.querySelector('#step-cur').style.top = this.nowPos[1] + 'px'
     this.intervalId = setInterval(() => {
       // this.info.style.display = 'flex'
       this.info.innerText = this.timeOut
@@ -119,7 +136,7 @@ export class Mode1Game {
         // this.brickNow.style.left = `${this.nowPos[0]}px !important;`
         // this.brickNow.style.top = `${this.nowPos[1]}px !important;`
         this.step += 2
-      }, music[this.step][1] * 1.3)
+      }, music[this.step][1] * 1.6)
     }
   }
 
