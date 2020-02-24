@@ -5,9 +5,12 @@ let cap
 let src
 let dst
 let streaming = true
+let settings = {
+  hideVidArea: false,
+}
 
-import { Mode2Game } from './question'
-import { Mode1Game } from './mode1'
+import {Mode2Game} from './question'
+import {Mode1Game} from './mode1'
 
 const byId = id => document.getElementById(id)
 
@@ -38,11 +41,20 @@ const changePageTo = (pageName, ...options) => {
   }
   if (pageName === 'Mode1Game') {
     const game1 = new Mode1Game()
-    game1.start()
+    // document.querySelector('#Mode1Game').requestFullscreen()
+    game1.ready()
     return game1
   }
 }
 
+window.onkeypress = evt => {
+  if (evt.key == 'h') {
+    settings.hideVidArea = !settings.hideVidArea
+    document.querySelector('#vid-area').className = settings.hideVidArea
+      ? 'fk-hidden'
+      : ''
+  }
+}
 function gotDevices(mediaDevices) {
   select.innerHTML = ''
   select.appendChild(document.createElement('option'))
@@ -74,7 +86,7 @@ startBtn.onclick = event => {
   if (select.value === '') {
     videoConstraints.facingMode = 'environment'
   } else {
-    videoConstraints.deviceId = { exact: select.value }
+    videoConstraints.deviceId = {exact: select.value}
   }
   const constraints = {
     video: videoConstraints,
@@ -107,7 +119,7 @@ cv['onRuntimeInitialized'] = () => {
   //   else setTimeout(waiter, 500)
   // }()
   ;(function tick() {
-    console.log('tick')
+    // console.log('tick')
     if (videoStarted) setTimeout(task, 2000)
     else setTimeout(tick, 500)
   })()

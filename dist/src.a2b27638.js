@@ -252,7 +252,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
-var _default = [[2107, 1000, 'none'], [11107, 400, 'none'], [13025, 200, 'none'], [13651, 100, 'none'], [14130, 300, 'none'], [15169, 300, 'none'], [16265, 200, 'none'], [16981, 400, 'none'], [18873, 200, 'none'], [19890, 400, 'none'], [21775, 300, 'none'], [22877, 400, 'none'], [24821, 100, 'none'], [25378, 100, 'none'], [25872, 300, 'none'], [27009, 300, 'none'], [28091, 200, 'none'], [28775, 400, 'none'], [30621, 300, 'none'], [31741, 400, 'none'], [33695, 300, 'none'], [34799, 400, 'none'], [36697, 200, 'none'], [37342, 100, 'none'], [37792, 300, 'none'], [38949, 300, 'none'], [39979, 200, 'none'], [40696, 400, 'none'], [42433, 300, 'none'], [43575, 400, 'none'], [45447, 300, 'none'], [46609, 400, 'none'], [48653, 100, 'none'], [49156, 100, 'none'], [49611, 300, 'none'], [50806, 300, 'none'], [51859, 200, 'none'], [52569, 400, 'none'], [54401, 300, 'none'], [55419, 400, 'none'], [57412, 300, 'none'], [58530, 400, 'none'], [60341, 200, 'none'], [60871, 100, 'none'], [61352, 300, 'none'], [62613, 300, 'none'], [63669, 200, 'none'], [64361, 400, 'none'], [66281, 300, 'none'], [67308, 400, 'none'], [69236, 300, 'none'], [70288, 400, 'none'], [72369, 100, 'none'], [72828, 100, 'none'], [73262, 300, 'none'], [74493, 300, 'none'], [75713, 100, 'none'], [76220, 400, 'none'], [78398, 200, 'none'], [79164, 300, 'none'], [80746, 300, 'none'], [82250, 400, 'none'], [84104, 200, 'none'], [84719, 100, 'none'], [85110, 300, 'none'], [86417, 400, 'none'], [88161, 400, 'none'], [90253, 200, 'none'], [91100, 300, 'none'], [92698, 300, 'none'], [94159, 400, 'none'], [96087, 200, 'none'], [96721, 100, 'none'], [97165, 300, 'none'], [98294, 300, 'none'], [99378, 200, 'none'], [100050, 400, 'none'], [101955, 200, 'none'], [102599, 100, 'none'], [103061, 300, 'none'], [104449, 200, 'none'], [105173, 200, 'none'], [106010, 500, 'none'], [108859, 400, 'none'], [110583, 300, 'none'], [111980, 300, 'none'], [113532, 300, 'none'], [114874, 400, 'none'], [116499, 300, 'none'], [118155, 300, 'lineOn'], [119396, 300, 'lineOn'], [120887, 300, 'lineOn'], [122264, 300, 'lineOn'], [123872, 300, 'lineOff'], [125277, 300, 'none'], [126834, 300, 'none'], [128244, 300, 'none'], [129841, 400, 'none'], [131210, 300, 'none'], [132718, 300, 'none'], [134096, 300, 'none'], [135620, 300, 'none'], [137113, 300, 'none'], [138686, 300, 'none'], [140097, 300, 'none'], [141545, 300, 'none'], [143003, 300, 'none'], [144576, 300, 'none'], [145926, 200, 'none'], [147511, 200, 'none'], [148952, 200, 'none'], [150518, 200, 'none'], [151270, 200, 'none'], [152020, 200, 'none'], [152715, 200, 'none'], [153489, 200, 'none'], [154179, 200, 'none'], [154923, 200, 'none'], [155681, 200, 'none'], [156423, 200, 'none'], [157198, 200, 'none'], [157889, 300, 'none'], [158800, 200, 'none'], [159457, 300, 'none'], [160874, 300, 'none'], [162450, 300, 'none'], [163828, 300, 'none'], [165367, 300, 'none'], [166715, 300, 'none'], [168291, 300, 'none'], [169757, 300, 'none'], [171286, 300, 'none'], [172698, 300, 'none'], [174281, 300, 'none'], [175745, 300, 'none'], [177208, 500, 'none'], [180408, 400, 'none'], [182246, 100, 'none'], [182736, 100, 'none'], [183162, 300, 'none'], [184393, 300, 'none'], [185600, 200, 'none'], [186143, 400, 'none'], [187990, 300, 'none'], [188971, 400, 'none'], [191022, 300, 'none'], [192063, 400, 'none'], [193911, 100, 'none'], [194496, 100, 'none'], [195041, 300, 'none'], [196137, 300, 'none'], [197217, 200, 'none'], [197972, 400, 'none'], [199934, 300, 'none'], [200867, 400, 'none'], [202722, 100, 'none'], [203233, 200, 'none'], [203988, 400, 'none'], [205933, 100, 'none'], [206451, 100, 'none'], [206894, 300, 'none'], [208037, 300, 'none'], [209133, 200, 'none'], [209809, 400, 'none'], [211657, 300, 'none'], [212720, 300, 'none'], [214127, 300, 'none'], [215772, 300, 'none'], [217749, 100, 'none'], [218266, 100, 'none'], [218751, 300, 'none'], [220330, 200, 'none'], [220987, 200, 'none'], [221721, 500, 'none'], [223729, 300, 'none'], [224610, 400, 'none'], [226317, 200, 'none'], [226955, 200, 'none'], [227737, 400, 'none'], [229588, 200, 'none'], [230169, 200, 'none'], [230627, 300, 'none'], [231878, 300, 'none'], [232772, 200, 'none'], [233455, 400, 'none'], [235369, 300, 'none'], [236410, 400, 'none'], [238111, 300, 'none'], [239393, 500, 'none'], [241407, 200, 'none'], [241893, 200, 'none'], [242444, 300, 'none'], [243704, 300, 'none'], [244688, 200, 'none'], [245374, 400, 'none'], [247216, 300, 'none'], [248380, 300, 'none'], [250053, 200, 'none'], [250816, 200, 'none'], [251371, 500, 'none']];
+var _default = [[5439, 300, 'none'], [6453, 300, 'none'], [7400, 300, 'none'], [8448, 300, 'none'], [9463, 300, 'none'], [10449, 300, 'none'], [11466, 300, 'none'], [12427, 300, 'none'], [13469, 300, 'none'], [14439, 300, 'none'], [15442, 300, 'none'], [16428, 300, 'none'], [17442, 300, 'none'], [18433, 300, 'none'], [19448, 300, 'none'], [20392, 300, 'none'], [21439, 300, 'none'], [22440, 300, 'none'], [23437, 300, 'none'], [24426, 300, 'none'], [25425, 300, 'none'], [26444, 300, 'none'], [27460, 300, 'none'], [28462, 300, 'none'], [29429, 300, 'none'], [30443, 300, 'none'], [31441, 300, 'none'], [32426, 300, 'none'], [33443, 300, 'none'], [34429, 300, 'none'], [35465, 300, 'none'], [36434, 300, 'none'], [37437, 300, 'none'], [38443, 300, 'none'], [39459, 300, 'none'], [40446, 300, 'none'], [41456, 300, 'none'], [42464, 300, 'none'], [43508, 300, 'none'], [44442, 300, 'none'], [45435, 300, 'none'], [46466, 300, 'none'], [47451, 300, 'none'], [48428, 300, 'none'], [49408, 300, 'none'], [50443, 300, 'none'], [51496, 300, 'none'], [52454, 300, 'none'], [53466, 300, 'none'], [54766, 300, 'none'], [55435, 300, 'none'], [56451, 300, 'none'], [57450, 300, 'none'], [58420, 300, 'none'], [59436, 300, 'none'], [60450, 300, 'none'], [61449, 300, 'none'], [62455, 300, 'none'], [63422, 300, 'none'], [64450, 300, 'none'], [65460, 300, 'none'], [66441, 300, 'none'], [67463, 300, 'none'], [68406, 300, 'none'], [69427, 300, 'none'], [70442, 300, 'none'], [71459, 300, 'none'], [72430, 300, 'none'], [73424, 300, 'none'], [74413, 300, 'none'], [75471, 300, 'none'], [76455, 300, 'none'], [77462, 300, 'none'], [78455, 300, 'none'], [79437, 300, 'none'], [80438, 300, 'none'], [81463, 300, 'none'], [82419, 300, 'none'], [83450, 300, 'none'], [84440, 300, 'none'], [85426, 300, 'none'], [86453, 300, 'none'], [87432, 300, 'none'], [88443, 300, 'none'], [89420, 300, 'none'], [90434, 300, 'none'], [91450, 300, 'none'], [92444, 300, 'none'], [93422, 300, 'none'], [94438, 300, 'none'], [95435, 300, 'none'], [96427, 300, 'none'], [97427, 300, 'none'], [98403, 300, 'none'], [99490, 300, 'none'], [100441, 300, 'none'], [101435, 300, 'none'], [102443, 300, 'none'], [103443, 300, 'none'], [104435, 300, 'none'], [105445, 300, 'none'], [106401, 300, 'none'], [107370, 300, 'none'], [108466, 300, 'none'], [109436, 300, 'none'], [110416, 300, 'none'], [111337, 300, 'none'], [112424, 300, 'none'], [113400, 300, 'none'], [114379, 300, 'none'], [115421, 300, 'none'], [116428, 300, 'none'], [117426, 300, 'none'], [118440, 300, 'none'], [119437, 300, 'none'], [120418, 300, 'none'], [121440, 300, 'none'], [122401, 300, 'none'], [123436, 300, 'none'], [124369, 300, 'none'], [125462, 300, 'none'], [126375, 300, 'none'], [127386, 300, 'none'], [128380, 300, 'none'], [129391, 300, 'none'], [130409, 300, 'none'], [131378, 300, 'none'], [132395, 300, 'none'], [133369, 300, 'none'], [134453, 300, 'none'], [135446, 300, 'none'], [136419, 300, 'none'], [137388, 300, 'none'], [138451, 300, 'none'], [139455, 300, 'none'], [140400, 300, 'none'], [141400, 300, 'none'], [142400, 300, 'none'], [143419, 300, 'none'], [144405, 300, 'none'], [145400, 300, 'none'], [146410, 300, 'none'], [147450, 300, 'none'], [148467, 300, 'none'], [149412, 300, 'none'], [150453, 300, 'none'], [151403, 300, 'none'], [152415, 300, 'none'], [153400, 300, 'none'], [154392, 300, 'none'], [155477, 300, 'none'], [156400, 300, 'none'], [157426, 300, 'none'], [158420, 300, 'none'], [159459, 300, 'none'], [160450, 300, 'none'], [161443, 300, 'none'], [162441, 300, 'none'], [163483, 300, 'none'], [164441, 300, 'none'], [165439, 300, 'none'], [166453, 300, 'none'], [167443, 300, 'none'], [168400, 300, 'none'], [169400, 300, 'none'], [170443, 300, 'none'], [171471, 300, 'none'], [172412, 300, 'none'], [173470, 300, 'none'], [174400, 300, 'none'], [175425, 300, 'none'], [176451, 300, 'none'], [177400, 300, 'none'], [178410, 300, 'none'], [179463, 300, 'none'], [180227, 300, 'none'], [181437, 300, 'none'], [182440, 300, 'none'], [183437, 300, 'none'], [184451, 300, 'none'], [185462, 300, 'none'], [186433, 300, 'none'], [187445, 300, 'none'], [188460, 300, 'none'], [189405, 300, 'none'], [190469, 300, 'none'], [191390, 300, 'none'], [192450, 300, 'none'], [193429, 300, 'none'], [194441, 300, 'none'], [195458, 300, 'none'], [196449, 300, 'none'], [197400, 300, 'none'], [198400, 300, 'none'], [199400, 300, 'none'], [200420, 300, 'none'], [201450, 300, 'none'], [202450, 300, 'none'], [203427, 300, 'none'], [204479, 300, 'none'], [205425, 300, 'none'], [206405, 300, 'none'], [207427, 300, 'none'], [208415, 300, 'none'], [209400, 300, 'none'], [210400, 300, 'none'], [211425, 300, 'none'], [212441, 300, 'none'], [213414, 300, 'none'], [214453, 300, 'none'], [215400, 300, 'none'], [216400, 300, 'none'], [217459, 300, 'none'], [218430, 300, 'none'], [219450, 300, 'none'], [220444, 300, 'none'], [221390, 300, 'none'], [222454, 300, 'none'], [223434, 300, 'none'], [224375, 300, 'none'], [225429, 300, 'none'], [226400, 300, 'none'], [227443, 300, 'none'], [228400, 300, 'none'], [229400, 300, 'none'], [230412, 300, 'none'], [231400, 300, 'none'], [232420, 300, 'none'], [233456, 300, 'none'], [234431, 300, 'none'], [235420, 300, 'none'], [236442, 300, 'none'], [237416, 300, 'none'], [238400, 300, 'none'], [239410, 300, 'none'], [240405, 300, 'none'], [241400, 300, 'none'], [242400, 300, 'none'], [243448, 300, 'none'], [244428, 300, 'none'], [245429, 300, 'none'], [246453, 300, 'none'], [247400, 300, 'none'], [248457, 300, 'none'], [249410, 300, 'none'], [250400, 300, 'none'], [251460, 300, 'none'], [252444, 300, 'none'], [253442, 300, 'none'], [254454, 300, 'none'], [255432, 300, 'none'], [256450, 300, 'none'], [257443, 300, 'none'], [258400, 300, 'none'], [259450, 300, 'none'], [260400, 300, 'none'], [261408, 300, 'none'], [262400, 300, 'none'], [263414, 300, 'none'], [264400, 300, 'none'], [265400, 300, 'none'], [266413, 300, 'none'], [267443, 300, 'none'], [268442, 300, 'none'], [269400, 300, 'none'], [270455, 300, 'none'], [271458, 300, 'none'], [272451, 300, 'none'], [273450, 300, 'none'], [274451, 300, 'none'], [275450, 300, 'none'], [276400, 300, 'none'], [277450, 300, 'none'], [278420, 300, 'none'], [279400, 300, 'none'], [280400, 300, 'none'], [281400, 300, 'none'], [282400, 300, 'none'], [283445, 300, 'none'], [284444, 300, 'none'], [285400, 300, 'none'], [286400, 300, 'none'], [287419, 300, 'none'], [288400, 300, 'none'], [289450, 300, 'none'], [290441, 300, 'none'], [291461, 300, 'none'], [292400, 300, 'none'], [293404, 300, 'none'], [294400, 300, 'none'], [295446, 300, 'none'], [296450, 300, 'none'], [297413, 300, 'none'], [298443, 300, 'none']];
 exports.default = _default;
 },{}],"src/mode1.js":[function(require,module,exports) {
 "use strict";
@@ -272,8 +272,7 @@ function _defineProperties(target, props) { for (var i = 0; i < props.length; i+
 
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
-console.log(_music.default[0]);
-
+// console.log(music[0])
 var Mode1Game =
 /*#__PURE__*/
 function () {
@@ -284,11 +283,15 @@ function () {
     this.player.onended = this.handleEnd.bind(this);
     this.info = document.querySelector('#Mode1Game .info');
     this.playGround = document.querySelector('#Mode1Game .playground');
-    this.timeOut = 3;
+    this.timeOut = 5;
     this.totalSteps = _music.default.length;
     this.step = 0;
     this.score = 0;
     this.grids = [];
+    this.brickNow = document.querySelector('#step-cur');
+    this.brickNext = document.querySelector('#step-next');
+    this.nowPos = [900, 600];
+    this.nexPos = this.genNextPos(this.nowPos[0], this.nowPos[1], 150, 1920, 1080);
   }
 
   _createClass(Mode1Game, [{
@@ -296,53 +299,95 @@ function () {
     value: function start() {
       var _this = this;
 
+      this.info.className += ' info-show';
+      this.ruleDom.className += ' dimming';
       this.intervalId = setInterval(function () {
-        _this.info.style.display = 'block';
+        // this.info.style.display = 'flex'
         _this.info.innerText = _this.timeOut;
         _this.timeOut -= 1;
 
         if (_this.timeOut === -1) {
-          clearInterval(_this.intervalId);
-          _this.player.style.display = 'block';
+          clearInterval(_this.intervalId); // this.player.style.display = 'block'
 
           _this.player.play();
 
-          _this.info.style.display = 'none';
+          _this.brickNow.style.visibility = 'visible';
+          _this.info.className = 'vanish';
+          _this.ruleDom.className = 'vanish';
           _this.musicLoopId = setInterval(_this.handleMusicLoop.bind(_this), 500);
         }
       }, 1000);
     }
   }, {
-    key: "handleMusicLoop",
-    value: function handleMusicLoop() {
+    key: "ready",
+    value: function ready() {
       var _this2 = this;
 
-      var currentTime = this.player.currentTime;
-      console.log(currentTime * 1000, _music.default[this.step][0]);
+      this.ruleDom = document.querySelector('#Mode1Rule');
+      this.ruleDom.className = 'show-scene';
+
+      this.ruleDom.querySelector('img').onclick = function (evt) {
+        _this2.start();
+      };
+    }
+  }, {
+    key: "genNextPos",
+    value: function genNextPos(x, y, r, scrW, scrH) {
+      var w = scrW - 2 * r;
+      var h = scrH - 2 * r;
+      var newX, newY;
+      if (x > w / 2) newX = Math.random() * (x - 2 * r);else newX = (w - x - 2 * r) * Math.random() + x + 2 * r;
+      if (y > h / 2) newY = Math.random() * (y - 2 * r);else newY = (h - y - 2 * r) * Math.random() + y + 2 * r;
+      if (newX > w) newX = w - 2 * r;
+      if (newY > h) newY = h - 2 * r; // newX = Math.random() * w
+      // newY = Math.random() * h
+
+      return [newX, newY];
+    }
+  }, {
+    key: "handleMusicLoop",
+    value: function handleMusicLoop() {
+      var _this3 = this;
+
+      var currentTime = this.player.currentTime; // console.log(currentTime * 1000, music[this.step][0])
 
       if (currentTime * 1000 >= _music.default[this.step][0] && currentTime * 1000 < _music.default[this.step + 1][0] && !this.grids.length) {
-        var active = document.createElement('div');
-        active.className = 'active';
-        active.innerText = 'I am active';
+        this.brickNext.className = ' visible';
+        this.brickNow.className = ' visible'; // const active = document.createElement('div')
+        // active.className = 'active'
+        // active.innerText = 'I am active'
+        // active.onclick = () => (this.score += 10)
+        // // change coordinates here
+        // this.grids.push(active)
+        // const inactive = document.createElement('div')
+        // inactive.className = 'inactive'
+        // inactive.innerText = 'I am inactive'
+        // this.grids.push(inactive)
+        // this.playGround.appendChild(active)
+        // this.playGround.appendChild(inactive)
+        // setTimeout(() => {
+        //   active.remove()
+        //   inactive.remove()
+        //   this.grids = []
+        //   this.step += 1
+        // }, music[this.step][1])
 
-        active.onclick = function () {
-          return _this2.score += 10;
-        }; // change coordinates here
-
-
-        this.grids.push(active);
-        var inactive = document.createElement('div');
-        inactive.className = 'inactive';
-        inactive.innerText = 'I am inactive';
-        this.grids.push(inactive);
-        this.playGround.appendChild(active);
-        this.playGround.appendChild(inactive);
         setTimeout(function () {
-          active.remove();
-          inactive.remove();
-          _this2.grids = [];
-          _this2.step += 1;
-        }, _music.default[this.step][1]);
+          _this3.brickNext.className = 'invisible';
+          _this3.brickNow.className = 'dimmed';
+          _this3.nowPos = _this3.nexPos;
+          _this3.nexPos = _this3.genNextPos(_this3.nowPos[0], _this3.nowPos[1], 150, 1280, 720);
+          console.log(_this3.nowPos, _this3.nexPos);
+          document.querySelector('#step-next').style.left = _this3.nexPos[0] + 'px';
+          document.querySelector('#step-next').style.top = _this3.nexPos[1] + 'px';
+          document.querySelector('#step-cur').style.left = _this3.nowPos[0] + 'px';
+          document.querySelector('#step-cur').style.top = _this3.nowPos[1] + 'px'; // this.brickNext.style.left = `${this.nexPos[0]}px !important;`
+          // this.brickNext.style.top = `${this.nexPos[1]}px !important;`
+          // this.brickNow.style.left = `${this.nowPos[0]}px !important;`
+          // this.brickNow.style.top = `${this.nowPos[1]}px !important;`
+
+          _this3.step += 2;
+        }, _music.default[this.step][1] * 1.3);
       }
     }
   }, {
@@ -370,28 +415,136 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 var _default = [{
-  question: 'What is the weather tomorrow?',
-  answers: [{
-    value: 'Sunny',
-    isCorrect: 1
+  question: 'What is the order of the colors of the French flag?',
+  answer: [{
+    value: 'Blue,Red,White',
+    isCorrect: '0'
   }, {
-    value: 'Rainy',
-    isCorrect: 0
+    value: 'Red,Blue,White',
+    isCorrect: '0'
   }, {
-    value: 'Windy',
-    isCorrect: 0
+    value: 'Blue,White,Red',
+    isCorrect: '1'
   }]
 }, {
-  question: 'What is the weather the day after tomorrow?',
-  answers: [{
-    value: 'Sunny',
-    isCorrect: 1
+  question: '(30+20)/5=?',
+  answer: [{
+    value: '5',
+    isCorrect: '0'
   }, {
-    value: 'Rainy',
-    isCorrect: 0
+    value: '10',
+    isCorrect: '1'
   }, {
-    value: 'Windy',
-    isCorrect: 0
+    value: '25',
+    isCorrect: '0'
+  }]
+}, {
+  question: 'The date of French National Day is?',
+  answer: [{
+    value: 'July 14',
+    isCorrect: '1'
+  }, {
+    value: 'July 10',
+    isCorrect: '0'
+  }, {
+    value: 'July 4',
+    isCorrect: '0'
+  }]
+}, {
+  question: 'How many countries are there in Europe?',
+  answer: [{
+    value: '44',
+    isCorrect: '0'
+  }, {
+    value: '45',
+    isCorrect: '1'
+  }, {
+    value: '46',
+    isCorrect: '0'
+  }]
+}, {
+  question: 'Which country is the westernmost point of mainland Europe?',
+  answer: [{
+    value: 'France',
+    isCorrect: '0'
+  }, {
+    value: 'U.K.',
+    isCorrect: '0'
+  }, {
+    value: 'Portugal',
+    isCorrect: '1'
+  }]
+}, {
+  question: 'Ireland is to the __??__ of Britain.',
+  answer: [{
+    value: 'West',
+    isCorrect: '1'
+  }, {
+    value: 'East',
+    isCorrect: '0'
+  }, {
+    value: 'North',
+    isCorrect: '0'
+  }]
+}, {
+  question: 'What is the national anthem of France?',
+  answer: [{
+    value: "L'Internationale",
+    isCorrect: '0'
+  }, {
+    value: 'Le Chant des Partisans',
+    isCorrect: '0'
+  }, {
+    value: 'La Marseillaise',
+    isCorrect: '1'
+  }]
+}, {
+  question: 'Which of the following numbers is prime?',
+  answer: [{
+    value: '12',
+    isCorrect: '0'
+  }, {
+    value: '11',
+    isCorrect: '1'
+  }, {
+    value: '21',
+    isCorrect: '0'
+  }]
+}, {
+  question: 'The three angles of a triangle add up to __?__ degrees',
+  answer: [{
+    value: '90',
+    isCorrect: '0'
+  }, {
+    value: '180',
+    isCorrect: '1'
+  }, {
+    value: '360',
+    isCorrect: '0'
+  }]
+}, {
+  question: 'What color are human eyes most sensitive to?',
+  answer: [{
+    value: 'Blue',
+    isCorrect: '0'
+  }, {
+    value: 'Red',
+    isCorrect: '0'
+  }, {
+    value: 'Green',
+    isCorrect: '1'
+  }]
+}, {
+  question: 'How to say thank you in French?',
+  answer: [{
+    value: 'Bonjour',
+    isCorrect: '0'
+  }, {
+    value: 'Merci',
+    isCorrect: '1'
+  }, {
+    value: 'Au revoir',
+    isCorrect: '0'
   }]
 }];
 exports.default = _default;
@@ -413,6 +566,9 @@ var cap;
 var src;
 var dst;
 var streaming = true;
+var settings = {
+  hideVidArea: false
+};
 
 var byId = function byId(id) {
   return document.getElementById(id);
@@ -450,9 +606,17 @@ var changePageTo = function changePageTo(pageName) {
   }
 
   if (pageName === 'Mode1Game') {
-    var game1 = new _mode.Mode1Game();
-    game1.start();
+    var game1 = new _mode.Mode1Game(); // document.querySelector('#Mode1Game').requestFullscreen()
+
+    game1.ready();
     return game1;
+  }
+};
+
+window.onkeypress = function (evt) {
+  if (evt.key == 'h') {
+    settings.hideVidArea = !settings.hideVidArea;
+    document.querySelector('#vid-area').className = settings.hideVidArea ? 'fk-hidden' : '';
   }
 };
 
@@ -528,7 +692,7 @@ cv['onRuntimeInitialized'] = function () {
   ;
 
   (function tick() {
-    console.log('tick');
+    // console.log('tick')
     if (videoStarted) setTimeout(task, 2000);else setTimeout(tick, 500);
   })();
 
@@ -603,7 +767,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "12079" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "10122" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
